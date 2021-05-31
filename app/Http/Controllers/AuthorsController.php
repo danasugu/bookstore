@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Author;
 use Illuminate\Http\Request;
+use App\Http\Resouces\AuthorsResource;
 
 class AuthorsController extends Controller
 {
@@ -46,7 +47,7 @@ class AuthorsController extends Controller
      */
     public function show(Author $author)
     {
-        return $author;
+        return new AuthorResource($author);
     }
 
     /**
