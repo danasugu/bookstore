@@ -15,7 +15,7 @@ class AuthorsController extends Controller
      */
     public function index()
     {
-        //
+        return AuthorsResources::collectionAuthor::all();
     }
 
     /**
@@ -36,7 +36,7 @@ class AuthorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return ('test');
     }
 
     /**
@@ -47,7 +47,7 @@ class AuthorsController extends Controller
      */
     public function show(Author $author)
     {
-        return new AuthorResource($author);
+        return new AuthorsResource($author);
     }
 
     /**
