@@ -74,7 +74,10 @@ class AuthorsController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        //
+        $author->update([
+            'name' => 'DS'
+        ]);
+        return new AuthorResource($author);
     }
 
     /**
