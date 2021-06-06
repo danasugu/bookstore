@@ -36,7 +36,13 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $faker = \Faker\Factory::create(1);
+        $book = Book::create([
+            'name' => $faker->name,
+            'description' => $faker->sentence,
+            'published_year' => $faker -> year
+        ]);
+        return new BooksResource($author);
     }
 
     /**
