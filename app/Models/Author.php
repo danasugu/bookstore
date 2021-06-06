@@ -10,4 +10,9 @@ class Author extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+    protecte $fillable = [
+        'laravel_through_key',
+        'created_at',
+        'updated_at'
+    ];
 }
