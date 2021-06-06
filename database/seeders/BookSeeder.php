@@ -13,6 +13,7 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
-        /$this->call(BookSeeder::class);
+        // /$this->call(BookSeeder::class);
+        \App\Models\Book::factory(5)->create();
     }
 }
